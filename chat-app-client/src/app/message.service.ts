@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs/Rx';
+import { ReplaySubject } from 'rxjs';
 import { PusherService } from './pusher.service';
 
 export interface Message {
@@ -18,7 +18,7 @@ export class MessageService {
   }
 
   initialize() {
-    this.pusherService.messagesChannel.bind('client-new-message', (message) => {
+    this.pusherService.messagesChannel.bind('client-new-message', (message: any) => {
       this.emitNewMessage(message);
     });
   }

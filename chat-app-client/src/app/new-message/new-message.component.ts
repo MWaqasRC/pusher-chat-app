@@ -7,8 +7,8 @@ import { MessageService } from '../message.service';
   styleUrls: ['./new-message.component.scss']
 })
 export class NewMessageComponent {
-  user: string;
-  message: string;
+  user!: string;
+  message!: string;
 
   constructor(private messageService: MessageService) { }
 
