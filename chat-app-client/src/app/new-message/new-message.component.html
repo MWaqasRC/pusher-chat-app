@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <label for="message">Message</label>
-    <input id="message" [(ngModel)]="message">
+    <input id="message" type="text" [(ngModel)]="message">
   </div>
 
   <button (click)="newMessage(message, user)" class="btn btn-default">Send</button>

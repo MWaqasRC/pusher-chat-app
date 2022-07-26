@@ -17,10 +17,11 @@ router.get('/', (req, res) => {
 });
 
 router.post('/pusher/auth', (req, res) => {
-  console.log(req)
+  console.log(req.body)
   const socketId = req.body.socket_id;
   const channel = req.body.channel_name;
   const auth = pusher.authenticate(socketId, channel);
+  console.log(auth)
   res.send(auth);
 });
 module.exports = router;

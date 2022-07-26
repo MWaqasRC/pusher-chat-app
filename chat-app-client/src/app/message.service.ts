@@ -19,6 +19,7 @@ export class MessageService {
 
   initialize() {
     this.pusherService.messagesChannel.bind('client-new-message', (message: any) => {
+      console.log(message)
       this.emitNewMessage(message);
     });
   }

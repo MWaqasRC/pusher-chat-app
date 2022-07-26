@@ -13,6 +13,6 @@ export class PusherService {
 
   initializePusher(): void {
     this.pusher = new Pusher(environment.pusher.key, { authEndpoint: 'http://localhost:3000/pusher/auth' ,cluster: 'ap4' });
-    this.messagesChannel = this.pusher.subscribe('my-channel');
+    this.messagesChannel = this.pusher.subscribe('private-messages');
   }
 }
